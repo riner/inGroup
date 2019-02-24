@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">in Group</string>
+    <string name="search_title">Настройки</string>
+
+    <!-- Строки TabLayout -->
+    <string name="Chat_item">Чат</string>
+    <string name="Announcement_item">Объявление</string>
+    <string name="New_item">Новости</string>
+</resources>
