@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView4"
-        android:gravity="center"
+        android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello"
+        android:gravity="center"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="326dp" />
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:textSize="15sp"
+        android:id="@+id/msgtext"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorPrimary"
+        android:hint="@string/input_text_msg"
+        android:paddingStart="55dp"
+        android:paddingEnd="45dp"
+        android:padding="16dp"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/sm_bnt"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/emoticon_happy_outline"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textAllCaps="false"
+        app:layout_anchor="@+id/welcome_text"
+        app:layout_anchorGravity="left|bottom" />
+
+    <Button
+        android:id="@+id/send_btn"
+        android:padding="16dp"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/send"
+        android:textAllCaps="false"
+        app:layout_anchor="@+id/welcome_text"
+        app:layout_anchorGravity="right|bottom" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="649dp"
+        android:layout_margin="16dp"
+        android:padding="16dp" />
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -5,7 +5,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.riner.ingroup.adapter.TabFragmentAdapter;
 
@@ -23,11 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         initTab();
         initToolbar();
-
-        TextView text  = (TextView) findViewById(R.id.textView4);
     }
 
 
@@ -44,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
     private void initToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
+
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Toast.makeText(MainActivity.this, "sada", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
         toolbar.setTitleTextColor(0xFFFFFFFF);
         toolbar.inflateMenu(R.menu.menu);

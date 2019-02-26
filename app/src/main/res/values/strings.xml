@@ -6,4 +6,14 @@
     <string name="Chat_item">Чат</string>
     <string name="Announcement_item">Объявление</string>
     <string name="New_item">Новости</string>
+
+
+    <string name="welcome_home_page">Добро пожаловать в приложение In Group! </string>
+    <string name="announcement_welcome_text">Список объявлений пуст!</string>
+    <string name="new_welcome_text">Нет новостей!</string>
+
+
+    <string name="input_text_msg">Введите текст</string>
+    <string name="msg_chat_my">Riner: Привет как дела!</string>
+
 </resources>
